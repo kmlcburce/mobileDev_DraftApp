@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'LoginScreen.dart';
+import 'AccountSettings.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -45,7 +46,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
       height: 50.0,
       buttonColor: Colors.white,
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AccountSettings()));
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
